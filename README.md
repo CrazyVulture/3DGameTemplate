@@ -1,2 +1,2 @@
 # GameDemo
-This is a game demo made by Unity
+This is a 3D game template made by Unity!
