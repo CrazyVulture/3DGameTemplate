@@ -28,9 +28,10 @@ public class SoundManager : MonoBehaviour
     }
 
     //play sound
-    public void PlaySound(AudioClip clip, float startTime = 0, float endTime = 0)
+    public void PlaySound(AudioClip clip, bool isLoop=false,float startTime = 0, float endTime = 0)
     {
         SoundSource.clip = clip;
+        SoundSource.loop = isLoop;
         if (endTime != 0)
         {
             SoundSource.time = startTime;
@@ -42,9 +43,10 @@ public class SoundManager : MonoBehaviour
     }
 
     //play sound
-    public void PlayMusic(AudioClip clip, float startTime = 0, float endTime = 0)
+    public void PlayMusic(AudioClip clip, bool isLoop = false, float startTime = 0, float endTime = 0)
     {
         MusicSource.clip = clip;
+        MusicSource.loop = isLoop;
         if (endTime != 0)
         {
             MusicSource.time = startTime;

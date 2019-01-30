@@ -34,7 +34,7 @@ public class BallController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PickUp"))
         {
-            SoundManager.Instance.PlaySound(collect,7.0f,8.0f);
+            SoundManager.Instance.PlaySound(collect);
             other.gameObject.SetActive(false);
             ++count;
             SceneManager.Instance.SetCountText(count);
