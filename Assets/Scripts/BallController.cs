@@ -10,12 +10,13 @@ public class BallController : MonoBehaviour
     private Rigidbody rb;
     private int count;
 
+    public AudioClip collect;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
-        SetCountText();
-        winText.text = "";
+        SceneManager.Instance.SetCountText(count);
     }
 
     //Update Physics effect before per frame
@@ -33,18 +34,10 @@ public class BallController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PickUp"))
         {
+            SoundManager.Instance.PlaySound(collect,7.0f,8.0f);
             other.gameObject.SetActive(false);
             ++count;
-            SetCountText();
-        }
-    }
-
-    private void SetCountText()
-    {
-        countText.text = "Count:" + count.ToString();
-        if (count>=12)
-        {
-            winText.text = "You win!";
+            SceneManager.Instance.SetCountText(count);
         }
     }
 }
