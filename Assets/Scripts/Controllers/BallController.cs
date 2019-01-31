@@ -4,8 +4,6 @@ using UnityEngine.UI;
 public class BallController : MonoBehaviour
 {
     public float speed;
-    public Text countText;
-    public Text winText;
 
     private Rigidbody rb;
     private int count;
@@ -16,7 +14,7 @@ public class BallController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
-        SceneManager.Instance.SetCountText(count);
+        UIMgr.Instance.SetCountText(count);
     }
 
     //Update Physics effect before per frame
@@ -34,10 +32,12 @@ public class BallController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PickUp"))
         {
-            SoundManager.Instance.PlaySound(collect);
+            SoundMgr.Instance.PlaySound(collect);
             other.gameObject.SetActive(false);
             ++count;
-            SceneManager.Instance.SetCountText(count);
+            UIMgr.Instance.SetCountText(count);
+            if (count >= 12)
+                EventMgr.Instance.Win();
         }
     }
 }
