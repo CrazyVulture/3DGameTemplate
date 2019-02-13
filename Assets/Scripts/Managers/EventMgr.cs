@@ -86,8 +86,4 @@ public class EventMgr : Singleton<EventMgr>
         isQuit = true;
     }
 
-    public GameController.GAMETYPE GetGameType()
-    {
-        return gameController.gameType;
-    }
 }

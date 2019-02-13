@@ -1,29 +1,15 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+public abstract class GameController : MonoBehaviour
 {
-    public enum GAMETYPE
-    {
-        COLLECT = 0,
-        FLYSHOOT
-    };
 
-    public GAMETYPE gameType;
-
-    public void StartGame()
+    public virtual void StartGame()
     {
-        switch (gameType)
-        {
-            case GAMETYPE.COLLECT:
-                break;
-            case GAMETYPE.FLYSHOOT:
-                break;
-        }
+        
     }
 
-    public void EndGame(bool isWin)
+    public virtual void EndGame(bool isWin)
     {
         if (isWin)
         {
@@ -33,13 +19,7 @@ public class GameController : MonoBehaviour
         {
 
         }
-        switch (gameType)
-        {
-            case GAMETYPE.COLLECT:
-                break;
-            case GAMETYPE.FLYSHOOT:
-                break;
-        }
+        
     }
 
     public void RestartGame()
