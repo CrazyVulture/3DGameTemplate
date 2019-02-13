@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class RotateController : MonoBehaviour
+public class SelfRotate : MonoBehaviour
 {
     public float rotateSpeed=45;
 

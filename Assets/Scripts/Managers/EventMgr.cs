@@ -2,40 +2,92 @@
 
 public class EventMgr : Singleton<EventMgr>
 {
+    public bool isStart { get; private set; }
+    bool isWin;
+    bool isRestart;
+    bool isQuit;
+    bool isLose;
+
+    public GameController gameController;
+
     public AudioClip bgmMusic;
     public AudioClip winSound;
-
-    private bool isWin=false;
+    public AudioClip loseSound;
 
     void Start()
     {
-        GameInit();
+        isStart = isWin = isRestart = isLose = isQuit = false;
+        SoundMgr.Instance.PlayMusic(bgmMusic, true);
     }
 
     void Update()
     {
+        if (isStart)
+        {
+            gameController.StartGame();
+            isStart = false;
+        }
         //Win Event
         if (isWin)
         {
-            WinAction();
+            SoundMgr.Instance.PlayMusic(winSound);
+            gameController.EndGame(true);
             isWin = false;
         }
-            
+        //Lose
+        if (isLose)
+        {
+            SoundMgr.Instance.PlayMusic(loseSound);
+            gameController.EndGame(false);
+            isLose = false;
+        }
+        //Restart
+        if (isRestart)
+        {
+            gameController.RestartGame();
+            isRestart = false;
+        }
+        //Quit
+        if (isQuit)
+        {
+            gameController.QuitGame();
+            isQuit = false;
+        }
+
     }
 
-    //Game Init
-    private void GameInit()
+    //Start
+    public void StartGame()
     {
-        SoundMgr.Instance.PlayMusic(bgmMusic, true);
+        isStart = true;
     }
 
     //Win
-    public void Win()
+    public void WinGame()
     {
         isWin = true;
     }
-    private void WinAction()
+
+    //Lose
+    public void LoseGame()
     {
-        SoundMgr.Instance.PlayMusic(winSound);
+        isLose = true;
+    }
+
+    //Restart
+    public void RestartGame()
+    {
+        isRestart = true;
+    }
+
+    //Quit
+    public void QuitGame()
+    {
+        isQuit = true;
+    }
+
+    public GameController.GAMETYPE GetGameType()
+    {
+        return gameController.gameType;
     }
 }

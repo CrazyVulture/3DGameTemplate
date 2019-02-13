@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8850009843970830758}
   - component: {fileID: 8850009843970830759}
   - component: {fileID: 7455975359217185068}
-  - component: {fileID: 3852329614179875360}
+  - component: {fileID: 2142135}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: PickUp
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8850009843970830752}
   m_LocalRotation: {x: 0.46193978, y: 0.19134173, z: 0.19134173, w: 0.84462327}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.50000006, z: 0.50000024}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,7 +109,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3852329614179875360
+--- !u!114 &2142135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

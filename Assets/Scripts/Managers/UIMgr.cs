@@ -1,28 +1,22 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class UIMgr : Singleton<UIMgr>
 {
-    public Text countText;
-    public Text winText;
+    public Text scoreText;
+
+    [HideInInspector]
+    public int score = 0;
 
     void Start()
     {
-        UIInit();
+        scoreText.text = "Score: " + score;
     }
 
-    //UI Init
-    private void UIInit()
+    public void AddScore(int deltaScore)
     {
-        winText.text = "";
-    }
-
-    public void SetCountText(int count)
-    {
-        countText.text = "Count:" + count.ToString();
-        if (count >= 12)
-        {
-            winText.text = "You win!";
-        }
+        score += deltaScore;
+        scoreText.text = "Score: " + score;
     }
 
 }
