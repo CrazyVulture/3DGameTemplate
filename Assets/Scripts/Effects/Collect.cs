@@ -4,11 +4,6 @@ public class Collect : MonoBehaviour
 {
     public AudioClip collect;
 
-    void Start()
-    {
-        
-    }
-
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PickUp"))

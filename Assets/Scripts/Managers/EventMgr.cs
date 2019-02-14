@@ -3,10 +3,7 @@
 public class EventMgr : Singleton<EventMgr>
 {
     public bool isStart { get; private set; }
-    bool isWin;
-    bool isRestart;
-    bool isQuit;
-    bool isLose;
+    bool isWin,isRestart,isQuit,isLose;
 
     public GameController gameController;
 
@@ -16,7 +13,8 @@ public class EventMgr : Singleton<EventMgr>
 
     void Start()
     {
-        isStart = isWin = isRestart = isLose = isQuit = false;
+        isStart = true;
+        /*isStart =*/ isWin = isRestart = isLose = isQuit = false;
         SoundMgr.Instance.PlayMusic(bgmMusic, true);
     }
 
