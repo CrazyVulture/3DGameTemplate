@@ -14,4 +14,9 @@ public class FlyShootGameController : GameController
         base.EndGame(isWin);
         shipPlayerController.Toggle(false);
     }
+
+    public override void PlayerDead()
+    {
+        shipPlayerController.Dead();
+    }
 }

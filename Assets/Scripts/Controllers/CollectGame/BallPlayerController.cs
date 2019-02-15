@@ -4,7 +4,7 @@ public class BallPlayerController : PlayerController
 {
     void Start()
     {
-        Init();
+        base.Init();
     }
 
     void FixedUpdate()

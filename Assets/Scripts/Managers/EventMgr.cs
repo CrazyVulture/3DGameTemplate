@@ -3,19 +3,16 @@
 public class EventMgr : Singleton<EventMgr>
 {
     public bool isStart { get; private set; }
-    bool isWin,isRestart,isQuit,isLose;
+    bool isWin,isRestart,isQuit,isLose,isDead;
 
     public GameController gameController;
 
-    public AudioClip bgmMusic;
-    public AudioClip winSound;
-    public AudioClip loseSound;
+    
 
     void Start()
     {
         isStart = true;
-        /*isStart =*/ isWin = isRestart = isLose = isQuit = false;
-        SoundMgr.Instance.PlayMusic(bgmMusic, true);
+        /*isStart =*/ isWin = isRestart = isLose = isQuit = isDead=false;
     }
 
     void Update()
@@ -28,14 +25,17 @@ public class EventMgr : Singleton<EventMgr>
         //Win Event
         if (isWin)
         {
-            SoundMgr.Instance.PlayMusic(winSound);
             gameController.EndGame(true);
             isWin = false;
+        }
+        if (isDead)
+        {
+            gameController.PlayerDead();
+            isDead = false;
         }
         //Lose
         if (isLose)
         {
-            SoundMgr.Instance.PlayMusic(loseSound);
             gameController.EndGame(false);
             isLose = false;
         }
@@ -51,7 +51,7 @@ public class EventMgr : Singleton<EventMgr>
             gameController.QuitGame();
             isQuit = false;
         }
-
+        
     }
 
     //Start
@@ -59,25 +59,26 @@ public class EventMgr : Singleton<EventMgr>
     {
         isStart = true;
     }
-
     //Win
     public void WinGame()
     {
         isWin = true;
     }
-
+    //Dead
+    public void PlayerDead()
+    {
+        isDead = true;
+    }
     //Lose
     public void LoseGame()
     {
         isLose = true;
     }
-
     //Restart
     public void RestartGame()
     {
         isRestart = true;
     }
-
     //Quit
     public void QuitGame()
     {

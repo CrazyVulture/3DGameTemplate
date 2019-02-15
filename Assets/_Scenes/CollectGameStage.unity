@@ -395,7 +395,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  collect: {fileID: 8300000, guid: 722a099f77d236a40b6ae7588fd4bed2, type: 3}
 --- !u!114 &237042108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,9 +776,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _persistent: 1
   gameController: {fileID: 1470858859}
-  bgmMusic: {fileID: 8300000, guid: d79063bcc43ff50448ca5eef50d9366a, type: 3}
-  winSound: {fileID: 8300000, guid: 8f4e508051786cf41af577ade410426e, type: 3}
-  loseSound: {fileID: 8300000, guid: 195abfab6597782419c001ed97bdfa08, type: 3}
 --- !u!1001 &284777865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1934,6 +1930,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44bc416372546b449a7ec5ecb13d7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgmMusic: {fileID: 8300000, guid: d79063bcc43ff50448ca5eef50d9366a, type: 3}
+  winSound: {fileID: 8300000, guid: 8f4e508051786cf41af577ade410426e, type: 3}
+  loseSound: {fileID: 0}
   ballController: {fileID: 237042107}
 --- !u!4 &1470858860
 Transform:

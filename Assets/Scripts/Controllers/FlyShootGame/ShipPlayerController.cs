@@ -6,24 +6,27 @@ public class ShipPlayerController : PlayerController
 
     public Boundary playerBoundary;
 
+    //Fire
     public Transform shooter;
     public GameObject lazer;
-
     public float fireRate;
-
     float nextFire;
+    public AudioClip fireSound;
+
+    //Death
+    public GameObject playerExplosion;
+    public AudioClip deathSound;
+    
 
     void Start()
     {
-        Init();
+        base.Init();
     }
 
     void Update()
     {
         if (Input.GetButton("Fire1")&&Time.time>nextFire)
             Fire();
-            
-        
     }
 
     void FixedUpdate()
@@ -52,5 +55,13 @@ public class ShipPlayerController : PlayerController
     {
         nextFire = Time.time + fireRate;
         Instantiate(lazer, shooter.position, shooter.rotation);
+        SoundMgr.Instance.PlaySound(fireSound);
+    }
+
+    public void Dead()
+    {
+        Instantiate(playerExplosion, transform.position, transform.rotation);
+        SoundMgr.Instance.PlaySound(deathSound);
+        Destroy(gameObject);
     }
 }

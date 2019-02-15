@@ -1,9 +1,9 @@
 ﻿
-public class LazerController : PlayerController
+public class LazerController : BaseController
 {
     void Start()
     {
-        Init();
+        base.Init();
         rb.velocity = transform.forward*speed;
     }
 
