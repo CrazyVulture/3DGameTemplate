@@ -17,10 +17,10 @@ public class ShipPlayerController : PlayerController
     public GameObject playerExplosion;
     public AudioClip deathSound;
     
-
     void Start()
     {
         base.Init();
+        playerStatus = PlayerStatus.DEFAULT;
     }
 
     void Update()
@@ -38,6 +38,7 @@ public class ShipPlayerController : PlayerController
     protected override void Move()
     {
         base.Move();
+        playerStatus = PlayerStatus.MOVE;
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rb.velocity=movement * speed;
 
@@ -49,6 +50,7 @@ public class ShipPlayerController : PlayerController
             );
 
         rb.rotation = Quaternion.Euler(0.0f, 0.0f, (-tilt)*rb.velocity.x);
+        playerStatus = PlayerStatus.DEFAULT;
     }
 
     void Fire()
@@ -63,5 +65,6 @@ public class ShipPlayerController : PlayerController
         Instantiate(playerExplosion, transform.position, transform.rotation);
         SoundMgr.Instance.PlaySound(deathSound);
         Destroy(gameObject);
+        playerStatus = PlayerStatus.DEAD;
     }
 }

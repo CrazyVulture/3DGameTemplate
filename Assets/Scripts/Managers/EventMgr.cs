@@ -3,11 +3,9 @@
 public class EventMgr : Singleton<EventMgr>
 {
     public bool isStart { get; private set; }
-    bool isWin,isRestart,isQuit,isLose,isDead;
+    bool isWin,isRestart,isQuit,isLose, isDead;
 
     public GameController gameController;
-
-    
 
     void Start()
     {

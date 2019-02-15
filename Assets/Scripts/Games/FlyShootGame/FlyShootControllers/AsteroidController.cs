@@ -23,6 +23,7 @@ public class AsteroidController : BaseController
         }
         SoundMgr.Instance.PlaySound(destroySound);
         Instantiate(explosion, transform.position, transform.rotation);
+        UIMgr.Instance.AddScore(10);
         Destroy(other.gameObject);
         Destroy(gameObject);
     }

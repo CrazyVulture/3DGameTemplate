@@ -1932,7 +1932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmMusic: {fileID: 8300000, guid: d79063bcc43ff50448ca5eef50d9366a, type: 3}
   winSound: {fileID: 8300000, guid: 8f4e508051786cf41af577ade410426e, type: 3}
-  loseSound: {fileID: 0}
+  loseSound: {fileID: 8300000, guid: 195abfab6597782419c001ed97bdfa08, type: 3}
   ballController: {fileID: 237042107}
 --- !u!4 &1470858860
 Transform:
@@ -2212,7 +2212,7 @@ GameObject:
   - component: {fileID: 1725057624}
   - component: {fileID: 1725057623}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2259,7 +2259,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -2270,7 +2270,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CountText
+  m_Text: Score:0
 --- !u!222 &1725057624
 CanvasRenderer:
   m_ObjectHideFlags: 0

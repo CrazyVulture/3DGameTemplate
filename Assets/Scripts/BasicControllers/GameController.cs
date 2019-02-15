@@ -20,14 +20,14 @@ public abstract class GameController : MonoBehaviour
         }
         else
         {
+            UIMgr.Instance.ShowText(TextType.LOSE);
             SoundMgr.Instance.PlayMusic(loseSound);
         }
-        
     }
 
     public virtual void PlayerDead()
     {
-
+        
     }
 
     public void RestartGame()
