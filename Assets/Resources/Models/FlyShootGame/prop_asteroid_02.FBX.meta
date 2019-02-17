@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: prop_asteroid_02
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: prop_asteroid_02_mat
+    second: {fileID: 2100000, guid: 3a3a1fd1e27aa634b91afd9e93e0a951, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

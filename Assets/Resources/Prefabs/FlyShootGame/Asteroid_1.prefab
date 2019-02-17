@@ -61,10 +61,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.543844
-  m_Height: 1.7082543
+  m_Radius: 0.5308515
+  m_Height: 1.6952517
   m_Direction: 1
-  m_Center: {x: -0.008793831, y: 0.009522915, z: -0.057019234}
+  m_Center: {x: -0.012118578, y: -0.058906198, z: -0.047001958}
 --- !u!114 &1470386485046742485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,11 +184,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470386485046742481}
     m_Modifications:
-    - target: {fileID: 8285941075655247921, guid: 5997227f11b1ce64b830b42df9e5180b,
-        type: 3}
-      propertyPath: m_Name
-      value: Asteroid_01
-      objectReference: {fileID: 0}
     - target: {fileID: 621855423, guid: 5997227f11b1ce64b830b42df9e5180b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -232,6 +227,11 @@ PrefabInstance:
     - target: {fileID: 621855423, guid: 5997227f11b1ce64b830b42df9e5180b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285941075655247921, guid: 5997227f11b1ce64b830b42df9e5180b,
+        type: 3}
+      propertyPath: m_Name
+      value: Asteroid_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5997227f11b1ce64b830b42df9e5180b, type: 3}
