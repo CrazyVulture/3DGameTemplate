@@ -18,6 +18,6 @@ public class FlyShootGameController : GameController
 
     public override void PlayerDead()
     {
-        shipPlayerController.Dead();
+        shipPlayerController.Death();
     }
 }

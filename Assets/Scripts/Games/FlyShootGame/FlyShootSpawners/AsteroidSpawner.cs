@@ -8,6 +8,7 @@ public class AsteroidSpawner : BaseSpawner
 
     void Start()
     {
+        objIndex = 0;
         timeLeft = waveTime;
         StartCoroutine(Spawn());
     }
@@ -16,6 +17,8 @@ public class AsteroidSpawner : BaseSpawner
     {
         if (Input.GetKeyDown(KeyCode.R))
             EventMgr.Instance.RestartGame();
+        if (Input.GetKeyDown(KeyCode.Escape))
+            EventMgr.Instance.QuitGame();
     }
 
     void FixedUpdate()
@@ -39,7 +42,9 @@ public class AsteroidSpawner : BaseSpawner
             spawnValues.z);
 
             spawnRotation = Quaternion.identity;
-            Instantiate(spawnObject, spawnPosition, spawnRotation);
+
+            objIndex = Random.Range(0, spawnObjects.Length);
+            Instantiate(spawnObjects[objIndex], spawnPosition, spawnRotation);
             yield return new WaitForSeconds(spawnInterval);
 
             if (timeLeft==0)

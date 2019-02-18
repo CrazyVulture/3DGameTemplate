@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2413409302185358038}
   - component: {fileID: 4483914524685827774}
   - component: {fileID: 1082344174147446398}
+  - component: {fileID: 1979407818537108817}
   m_Layer: 0
   m_Name: Asteroid_3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,8 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -3
-  explosion: {fileID: 100004, guid: 0626109f21ce7ea4e8055c142a2de733, type: 3}
-  destroySound: {fileID: 8300000, guid: 7590399522343c14d9865e7842141953, type: 3}
+  scoreVal: 10
 --- !u!114 &1082344174147446398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +96,21 @@ MonoBehaviour:
   tumble: 5
   rotateAxis: 0
   rotateSpeed: 45
+--- !u!114 &1979407818537108817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8804674351531564021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95cd13b44c2dd164b968c4259bf67dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 100004, guid: 0626109f21ce7ea4e8055c142a2de733, type: 3}
+  destroySound: {fileID: 8300000, guid: 7590399522343c14d9865e7842141953, type: 3}
+  enemyController: {fileID: 4483914524685827774}
 --- !u!1001 &4800436379667599195
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 public abstract class BaseSpawner : MonoBehaviour
 {
     //Spawn target Obj
-    public GameObject spawnObject;
+    public GameObject[] spawnObjects;
 
     //Spawn target transform
     public Vector3 spawnValues;
@@ -13,5 +13,8 @@ public abstract class BaseSpawner : MonoBehaviour
 
     //Spawn target time interval
     public float spawnInterval;
+
+    //Spawn obj Index
+    protected int objIndex;
 
 }

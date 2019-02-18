@@ -11,7 +11,17 @@ ModelImporter:
     3300000: //RootNode
     4300000: vehicle_enemyShip
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vehicle_enemyShip_glow_mat
+    second: {fileID: 2100000, guid: 51510faf28730f24e8881c2b148c0b86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vehicle_enemyShip_metal_mat
+    second: {fileID: 2100000, guid: 95c6f683e4c98c845b03520379ef0607, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -35,6 +35,14 @@ public class ShipPlayerController : PlayerController
             Move();
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Boundary")
+            return;
+        if (other.tag == "Enemy")
+            EventMgr.Instance.PlayerDead();
+    }
+
     protected override void Move()
     {
         base.Move();
@@ -60,11 +68,10 @@ public class ShipPlayerController : PlayerController
         SoundMgr.Instance.PlaySound(fireSound);
     }
 
-    public void Dead()
+    public override void Death()
     {
         Instantiate(playerExplosion, transform.position, transform.rotation);
         SoundMgr.Instance.PlaySound(deathSound);
-        Destroy(gameObject);
-        playerStatus = PlayerStatus.DEAD;
+        base.Death();
     }
 }

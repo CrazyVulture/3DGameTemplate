@@ -32,5 +32,11 @@ public abstract class PlayerController : BaseController
         moveHorizontal = Input.GetAxis("Horizontal");
         moveVertical = Input.GetAxis("Vertical");
     }
+
+    public virtual void Death()
+    {
+        Destroy(gameObject);
+        playerStatus = PlayerStatus.DEAD;
+    }
     
 }
