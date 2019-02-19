@@ -88,9 +88,9 @@ GameObject:
   - component: {fileID: 3100725180161844125}
   - component: {fileID: 3100725180161844124}
   - component: {fileID: 3100725180161844131}
-  - component: {fileID: 3100725180161844130}
+  - component: {fileID: 212781307065275197}
   m_Layer: 0
-  m_Name: Bolt
+  m_Name: Bolt_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +141,7 @@ CapsuleCollider:
   m_Height: 0.5
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3100725180161844130
+--- !u!114 &212781307065275197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3100725180161844126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c4c57006eac4d4480145bf16366f31, type: 3}
+  m_Script: {fileID: 11500000, guid: 587ec28190811a04f93e5130a2e20d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20

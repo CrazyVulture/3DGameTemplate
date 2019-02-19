@@ -82,8 +82,19 @@ MonoBehaviour:
   scoreVal: 100
   shooter: {fileID: 8169824993843243943}
   lazer: {fileID: 6107007007719897906, guid: 779e407cdc3874848849d49973a3b87b, type: 3}
-  fireRate: 2
+  fireRate: 3
   fireSound: {fileID: 8300000, guid: b8146e51b451beb4989ad9ece13700b5, type: 3}
+  dodge: 5
+  startWait: {x: 0.5, y: 1}
+  maneuverTime: {x: 1, y: 2}
+  manenverWait: {x: 1, y: 2}
+  smoothing: 7.5
+  enemyBoundary:
+    xMin: -6
+    xMax: 6
+    zMin: -20
+    zMax: 20
+  tilt: 10
 --- !u!114 &8169824992958799039
 MonoBehaviour:
   m_ObjectHideFlags: 0

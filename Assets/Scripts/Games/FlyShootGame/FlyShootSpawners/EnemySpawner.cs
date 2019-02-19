@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AsteroidSpawner : BaseSpawner
+public class EnemySpawner : BaseSpawner
 {
     public float waveTime;
     float timeLeft;
