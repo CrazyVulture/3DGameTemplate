@@ -4,8 +4,6 @@ using UnityEngine;
 public abstract class BaseController : MonoBehaviour
 {
     protected Rigidbody rb;
-
-    //Move
     protected bool canMove;
     public float speed;
 
@@ -14,10 +12,7 @@ public abstract class BaseController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    protected virtual void Move()
-    {
-
-    }
+    protected abstract void Move();
 
     public void Toggle(bool toggle)
     {

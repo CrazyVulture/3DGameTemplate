@@ -8,6 +8,11 @@ public abstract class EnemyController : BaseController
         base.Init();
     }
 
+    protected override void Move()
+    {
+
+    }
+
     public void Death()
     {
         UIMgr.Instance.AddScore(scoreVal);

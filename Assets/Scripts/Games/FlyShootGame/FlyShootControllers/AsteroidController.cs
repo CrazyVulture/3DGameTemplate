@@ -1,6 +1,4 @@
 ﻿
-using UnityEngine;
-
 public class AsteroidController : EnemyController
 {
     void Start()

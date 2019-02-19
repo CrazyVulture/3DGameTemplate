@@ -2,8 +2,8 @@
 
 public class ShipPlayerController : PlayerController
 {
+    //Move
     public float tilt;
-
     public Boundary playerBoundary;
 
     //Fire

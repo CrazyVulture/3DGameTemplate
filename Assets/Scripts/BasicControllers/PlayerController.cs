@@ -28,7 +28,6 @@ public abstract class PlayerController : BaseController
 
     protected override void Move()
     {
-        base.Move();
         moveHorizontal = Input.GetAxis("Horizontal");
         moveVertical = Input.GetAxis("Vertical");
     }
