@@ -12,8 +12,6 @@ public abstract class BaseController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    protected abstract void Move();
-
     public void Toggle(bool toggle)
     {
         canMove = toggle;

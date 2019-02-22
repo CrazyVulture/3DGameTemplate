@@ -17,10 +17,9 @@ public class ShipPlayerController : PlayerController
     public GameObject playerExplosion;
     public AudioClip deathSound;
     
-    void Start()
+    void Awake()
     {
         base.Init();
-        playerStatus = PlayerStatus.DEFAULT;
     }
 
     void Update()
@@ -43,11 +42,11 @@ public class ShipPlayerController : PlayerController
             EventMgr.Instance.PlayerDead();
     }
 
-    protected override void Move()
+    void Move()
     {
-        base.Move();
+        GetAxisMove();
         playerStatus = PlayerStatus.MOVE;
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rb.velocity=movement * speed;
 
         //Set player section boundary

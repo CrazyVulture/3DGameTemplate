@@ -1,7 +1,7 @@
 ﻿
 public class CollectGameController : GameController
 {
-    public BallPlayerController ballController;
+    public CollectPlayerController ballController;
 
     public override void StartGame()
     {
