@@ -22,6 +22,7 @@ public class ShipEnemyController : EnemyController
     public float smoothing;
     public Boundary enemyBoundary;
     public float tilt;
+    public float speed;
     float currentSpeed;
 
     void Start()

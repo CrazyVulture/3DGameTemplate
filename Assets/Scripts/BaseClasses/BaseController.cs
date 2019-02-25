@@ -5,7 +5,6 @@ public abstract class BaseController : MonoBehaviour
 {
     protected Rigidbody rb;
     protected bool canMove;
-    public float speed;
 
     protected virtual void Init()
     {

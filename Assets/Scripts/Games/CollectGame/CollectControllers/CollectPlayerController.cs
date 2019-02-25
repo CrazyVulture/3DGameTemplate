@@ -2,7 +2,6 @@
 
 public class CollectPlayerController : PlayerController
 {
-
     //Hurt
     public AudioClip hurtSound;
 
@@ -64,5 +63,4 @@ public class CollectPlayerController : PlayerController
             isWalking = true;
         playerAnim.SetBool("IsWalking", isWalking);
     }
-
 }

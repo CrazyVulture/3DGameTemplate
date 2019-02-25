@@ -1,17 +1,18 @@
 ﻿
 public class CollectGameController : GameController
 {
-    public CollectPlayerController ballController;
+    public CollectPlayerController collectPlayerController;
 
     public override void StartGame()
     {
         base.StartGame();
-        ballController.Toggle(true);
+        collectPlayerController.Toggle(true);
     }
 
     public override void EndGame(bool isWin)
     {
         base.EndGame(isWin);
-        ballController.Toggle(false);
+        collectPlayerController.Toggle(false);
+        collectPlayerController.Death();
     }
 }

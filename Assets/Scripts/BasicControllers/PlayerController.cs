@@ -12,6 +12,7 @@ public abstract class PlayerController : BaseController
     protected static PlayerStatus playerStatus;
 
     //Move
+    public float speed;
     protected float moveHorizontal;
     protected float moveVertical;
     protected Vector3 movement;
@@ -43,7 +44,6 @@ public abstract class PlayerController : BaseController
 
     public virtual void Death()
     {
-        Destroy(gameObject);
         playerStatus = PlayerStatus.DEAD;
     }
     

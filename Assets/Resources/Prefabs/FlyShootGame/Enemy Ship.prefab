@@ -78,13 +78,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b25242c21e83214b9a70a35d705e377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -5
   scoreVal: 100
   shooter: {fileID: 8169824993843243943}
   lazer: {fileID: 6107007007719897906, guid: 779e407cdc3874848849d49973a3b87b, type: 3}
   fireRate: 3
   fireSound: {fileID: 8300000, guid: b8146e51b451beb4989ad9ece13700b5, type: 3}
-  dodge: 5
   startWait: {x: 0.5, y: 1}
   maneuverTime: {x: 1, y: 2}
   manenverWait: {x: 1, y: 2}
@@ -95,6 +93,7 @@ MonoBehaviour:
     zMin: -20
     zMax: 20
   tilt: 10
+  speed: -5
 --- !u!114 &8169824992958799039
 MonoBehaviour:
   m_ObjectHideFlags: 0

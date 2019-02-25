@@ -69,6 +69,7 @@ public class ShipPlayerController : PlayerController
 
     public override void Death()
     {
+        Destroy(gameObject);
         Instantiate(playerExplosion, transform.position, transform.rotation);
         SoundMgr.Instance.PlaySound(deathSound);
         base.Death();
