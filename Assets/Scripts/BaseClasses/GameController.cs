@@ -25,10 +25,7 @@ public abstract class GameController : MonoBehaviour
         }
     }
 
-    public virtual void PlayerDead()
-    {
-        
-    }
+    public abstract void PlayerDead();
 
     public void RestartGame()
     {

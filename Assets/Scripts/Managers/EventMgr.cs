@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-
+﻿
 public class EventMgr : Singleton<EventMgr>
 {
     public bool isStart { get; private set; }
@@ -20,7 +19,6 @@ public class EventMgr : Singleton<EventMgr>
             gameController.StartGame();
             isStart = false;
         }
-        //Win Event
         if (isWin)
         {
             gameController.EndGame(true);
@@ -31,53 +29,43 @@ public class EventMgr : Singleton<EventMgr>
             gameController.PlayerDead();
             isDead = false;
         }
-        //Lose
         if (isLose)
         {
             gameController.EndGame(false);
             isLose = false;
         }
-        //Restart
         if (isRestart)
         {
             gameController.RestartGame();
             isRestart = false;
         }
-        //Quit
         if (isQuit)
         {
             gameController.QuitGame();
             isQuit = false;
         }
-        
     }
 
-    //Start
     public void StartGame()
     {
         isStart = true;
     }
-    //Win
     public void WinGame()
     {
         isWin = true;
     }
-    //Dead
     public void PlayerDead()
     {
         isDead = true;
     }
-    //Lose
     public void LoseGame()
     {
         isLose = true;
     }
-    //Restart
     public void RestartGame()
     {
         isRestart = true;
     }
-    //Quit
     public void QuitGame()
     {
         isQuit = true;

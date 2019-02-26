@@ -135,7 +135,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreVal: 100
+  timeBetweenAttacks: 0.5
+  attackDamage: 10
+  collectPlayerController: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 02e6208ec76314158a9f548f51fe9f11, type: 3}
+  MaxHealth: 50
 --- !u!1 &1366207710
 GameObject:
   m_ObjectHideFlags: 0

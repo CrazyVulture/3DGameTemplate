@@ -13,6 +13,11 @@ public class CollectGameController : GameController
     {
         base.EndGame(isWin);
         collectPlayerController.Toggle(false);
+    }
+
+    public override void PlayerDead()
+    {
         collectPlayerController.Death();
+        collectPlayerController.Toggle(false);
     }
 }
