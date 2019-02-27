@@ -8,10 +8,10 @@ public abstract class EnemyController : BaseController
         base.Init();
     }
 
-    public void Death()
+    public virtual void Death(float lifetime=2.0f)
     {
         UIMgr.Instance.AddScore(scoreVal);
-        Destroy(gameObject);
+        Destroy(gameObject,lifetime);
     }
 
 }
