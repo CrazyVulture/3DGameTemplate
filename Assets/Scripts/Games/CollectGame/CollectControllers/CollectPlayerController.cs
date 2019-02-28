@@ -175,10 +175,11 @@ public class CollectPlayerController : PlayerController
         base.Death();
     }
 
-    public void WinAction()
+    public override void WinAction()
     {
         playerAnim.enabled = false;
         DisableEffects();
         canFire = false;
+        base.WinAction();
     }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemySpawner : BaseSpawner
+public class FlyShootEnemySpawner : BaseSpawner
 {
     public float waveTime;
     float timeLeft;
@@ -11,14 +11,6 @@ public class EnemySpawner : BaseSpawner
         objIndex = 0;
         timeLeft = waveTime;
         StartCoroutine(Spawn());
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-            EventMgr.Instance.RestartGame();
-        if (Input.GetKeyDown(KeyCode.Escape))
-            EventMgr.Instance.QuitGame();
     }
 
     void FixedUpdate()

@@ -4,7 +4,8 @@ public enum PlayerStatus
 {
     DEFAULT = 0,
     MOVE,
-    DEAD
+    DEAD,
+    WIN
 };
 
 public abstract class PlayerController : BaseController
@@ -45,6 +46,11 @@ public abstract class PlayerController : BaseController
     public virtual void Death()
     {
         playerStatus = PlayerStatus.DEAD;
+    }
+
+    public virtual void WinAction()
+    {
+        playerStatus = PlayerStatus.WIN;
     }
     
 }

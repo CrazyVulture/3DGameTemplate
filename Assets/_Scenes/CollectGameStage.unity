@@ -203,63 +203,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54849981}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &87816458
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 87816460, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_Name
-      value: Zombunny
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 87816459, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6ad6de5856f92584583843d700d89aef, type: 3}
 --- !u!1 &147971449
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +235,7 @@ Transform:
   - {fileID: 1834344535}
   - {fileID: 1981704608}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &242161801
 GameObject:
@@ -457,7 +400,6 @@ MonoBehaviour:
   restartText: {fileID: 0}
   loseText: {fileID: 0}
   scoreText: {fileID: 1725057623}
-  score: 0
   healthSlider: {fileID: 2040404762}
 --- !u!4 &284381737
 Transform:
@@ -2439,6 +2381,7 @@ GameObject:
   - component: {fileID: 1725057622}
   - component: {fileID: 1725057624}
   - component: {fileID: 1725057623}
+  - component: {fileID: 1725057625}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -2463,7 +2406,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 15, y: -15}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 152.01, y: 32.43}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1725057623
 MonoBehaviour:
@@ -2492,7 +2435,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2507,6 +2450,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725057621}
   m_CullTransparentMesh: 0
+--- !u!114 &1725057625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725057621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1727145989
 GameObject:
   m_ObjectHideFlags: 0

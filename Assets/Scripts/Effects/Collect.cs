@@ -11,7 +11,7 @@ public class Collect : MonoBehaviour
             SoundMgr.Instance.PlaySound(collect);
             other.gameObject.SetActive(false);
             UIMgr.Instance.AddScore(100);
-            if (UIMgr.Instance.score >= 1200)
+            if (UIMgr.Instance.GetScore() >= 1200)
                 EventMgr.Instance.WinGame();
         }
     }

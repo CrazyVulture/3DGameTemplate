@@ -51,7 +51,9 @@ public class CollectEnemyController : EnemyController
             transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
         }
         //Attack
-        else if (PlayerController.GetPlayerStatus() != PlayerStatus.DEAD && currentHealth>0)
+        else if (PlayerController.GetPlayerStatus() != PlayerStatus.DEAD && 
+                 PlayerController.GetPlayerStatus() != PlayerStatus.WIN && 
+                 currentHealth>0)
         {
             nav.SetDestination(player.position);
             timer += Time.deltaTime;
@@ -63,9 +65,9 @@ public class CollectEnemyController : EnemyController
         }
         else
         {
+            nav.enabled = false;
             enemyAnim.SetTrigger("IsPlayerDead");
         }
-            
     }
 
     void OnTriggerEnter(Collider other)

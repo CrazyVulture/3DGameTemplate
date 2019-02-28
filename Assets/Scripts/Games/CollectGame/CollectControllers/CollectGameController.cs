@@ -18,7 +18,7 @@ public class CollectGameController : GameController
 
     public override void PlayerDead()
     {
-        collectPlayerController.Death();
         collectPlayerController.Toggle(false);
+        collectPlayerController.Death();
     }
 }

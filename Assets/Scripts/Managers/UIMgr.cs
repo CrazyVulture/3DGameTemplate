@@ -13,22 +13,27 @@ public class UIMgr : Singleton<UIMgr>
     public GameObject restartText;
     public GameObject loseText;
     public Text scoreText;
-    [HideInInspector]
-    public int score = 0;
+    int score = 0;
 
     //Health
     public Slider healthSlider;
 
+    //Score part
     public void AddScore(int deltaScore)
     {
         score += deltaScore;
         UpdateScore();
     }
+    public int GetScore()
+    {
+        return score;
+    }
     void UpdateScore()
     {
         scoreText.text = "Score: " + score;
     }
-
+    
+    //Health part
     public int TakeHealth(int currentHealth,int deltaHealth)
     {
         currentHealth -= deltaHealth;
