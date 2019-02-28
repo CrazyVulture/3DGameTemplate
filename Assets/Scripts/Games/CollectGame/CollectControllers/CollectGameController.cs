@@ -12,8 +12,9 @@ public class CollectGameController : GameController
     public override void EndGame(bool isWin)
     {
         base.EndGame(isWin);
+        if (isWin)
+            collectPlayerController.WinAction();
         collectPlayerController.Toggle(false);
-        collectPlayerController.WinAction();
     }
 
     public override void PlayerDead()

@@ -1157,10 +1157,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 1
-  scoreText: {fileID: 960028736}
+  winScore: 3000
   restartText: {fileID: 1197456150}
   loseText: {fileID: 1885554082}
-  score: 0
+  scoreText: {fileID: 960028736}
+  healthSlider: {fileID: 0}
 --- !u!1 &1432485511
 GameObject:
   m_ObjectHideFlags: 0

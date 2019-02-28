@@ -9,6 +9,7 @@ public enum TextType
 
 public class UIMgr : Singleton<UIMgr>
 {
+    public int winScore;
     //Texts
     public GameObject restartText;
     public GameObject loseText;
@@ -23,6 +24,8 @@ public class UIMgr : Singleton<UIMgr>
     {
         score += deltaScore;
         UpdateScore();
+        if (score>=winScore)
+            EventMgr.Instance.WinGame();
     }
     public int GetScore()
     {

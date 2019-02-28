@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿
 using UnityEngine;
 
 public class CollectEnemySpawner : BaseSpawner
@@ -13,7 +13,7 @@ public class CollectEnemySpawner : BaseSpawner
     
     void Spawn()
     {
-        if (PlayerController.GetPlayerStatus()==PlayerStatus.DEAD)
+        if (PlayerController.GetPlayerStatus()==PlayerStatus.DEAD || PlayerController.GetPlayerStatus()==PlayerStatus.WIN)
             return;
 
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);

@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreVal: 100
+  deathTime: 0
   shooter: {fileID: 8169824993843243943}
   lazer: {fileID: 6107007007719897906, guid: 779e407cdc3874848849d49973a3b87b, type: 3}
   fireRate: 3
