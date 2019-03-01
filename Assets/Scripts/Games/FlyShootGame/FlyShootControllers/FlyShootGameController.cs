@@ -6,10 +6,7 @@ public class FlyShootGameController : GameController
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-            EventMgr.Instance.RestartGame();
-        if (Input.GetKeyDown(KeyCode.Escape))
-            EventMgr.Instance.QuitGame();
+        base.KeyboardControll();
     }
 
     public override void StartGame()

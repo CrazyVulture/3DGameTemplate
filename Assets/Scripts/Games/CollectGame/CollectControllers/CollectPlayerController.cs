@@ -173,6 +173,7 @@ public class CollectPlayerController : PlayerController
         DisableEffects();
         canFire = false;
         base.Death();
+        EventMgr.Instance.LoseGame();
     }
 
     public override void WinAction()

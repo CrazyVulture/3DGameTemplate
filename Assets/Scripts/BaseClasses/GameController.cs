@@ -6,6 +6,15 @@ public abstract class GameController : MonoBehaviour
     public AudioClip bgmMusic;
     public AudioClip winSound;
     public AudioClip loseSound;
+    public GameObject sceneManager;
+
+    protected virtual void KeyboardControll()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && PlayerController.GetPlayerStatus()==PlayerStatus.DEAD)
+            EventMgr.Instance.RestartGame();
+        if (Input.GetKeyDown(KeyCode.Escape))
+            EventMgr.Instance.QuitGame();
+    }
 
     public virtual void StartGame()
     {
@@ -29,8 +38,8 @@ public abstract class GameController : MonoBehaviour
 
     public void RestartGame()
     {
+        Destroy(sceneManager);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Destroy(GameObject.FindGameObjectWithTag("Manager"));
     }
 
     public void QuitGame()

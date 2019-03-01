@@ -3,6 +3,11 @@ public class CollectGameController : GameController
 {
     public CollectPlayerController collectPlayerController;
 
+    void Update()
+    {
+        base.KeyboardControll();
+    }
+
     public override void StartGame()
     {
         base.StartGame();
@@ -22,4 +27,5 @@ public class CollectGameController : GameController
         collectPlayerController.Toggle(false);
         collectPlayerController.Death();
     }
+
 }

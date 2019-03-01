@@ -52,7 +52,16 @@ public class UIMgr : Singleton<UIMgr>
                 restartText.SetActive(true);
                 break;
             case TextType.LOSE:
-                loseText.SetActive(true);
+                {
+                    loseText.SetActive(true);
+                    var anim = loseText.GetComponentInParent<Animator>();
+                    if (anim)
+                    {
+                        anim.SetTrigger("GameOver");
+                        restartText.SetActive(true);
+                    }
+                }
+                
                 break;
         }
     }
