@@ -924,7 +924,6 @@ GameObject:
   m_Component:
   - component: {fileID: 400744295}
   - component: {fileID: 400744296}
-  - component: {fileID: 400744297}
   m_Layer: 0
   m_Name: ControlTest
   m_TagString: Untagged
@@ -956,18 +955,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78723a355d33e264187eea18896a4ee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &400744297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400744294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92d753c43fb54fc44865db03546ed891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &413532152
