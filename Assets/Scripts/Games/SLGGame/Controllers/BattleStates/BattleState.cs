@@ -3,7 +3,7 @@
 public abstract class BattleState : State
 {
     protected BattleController owner;
-    public CameraRig cameraRig { get { return owner.camereRig; } }
+    public CameraController cameraRig { get { return owner.camereRig; } }
     public Board board { get { return owner.board; } }
     public LevelData levelData { get { return owner.levelData; } }
     public Transform selector { get { return owner.selector; } }

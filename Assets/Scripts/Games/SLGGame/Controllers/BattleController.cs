@@ -2,7 +2,7 @@
 
 public class BattleController : StateMachine
 {
-    public CamereRig camereRig;
+    public CameraController camereRig;
     public Board board;
     public LevelData levelData;
     public Transform selector;
